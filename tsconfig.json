@@ -21,7 +21,7 @@
 
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
-    "importsNotUsedAsValues": "error" /* Specify emit/checking behavior for imports that are only used for types. */,
+    "verbatimModuleSyntax": true,
     // only enable the below for performance reasons, or when included libs conflict with other types
     // "skipLibCheck": true /* Skip type checking of declaration files. */,
 
