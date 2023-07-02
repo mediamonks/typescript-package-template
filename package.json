@@ -74,7 +74,7 @@
     ]
   },
   "devDependencies": {
-    "@mediamonks/eslint-config": "^2.2.0",
+    "@mediamonks/eslint-config": "^2.2.2",
     "@mediamonks/eslint-config-typescript": "^1.2.0",
     "@mediamonks/prettier-config": "^1.0.1",
     "@types/shelljs": "^0.8.12",
