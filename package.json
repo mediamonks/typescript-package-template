@@ -74,10 +74,10 @@
     ]
   },
   "devDependencies": {
-    "@mediamonks/eslint-config": "^2.2.0",
-    "@mediamonks/eslint-config-typescript": "^1.2.0",
+    "@mediamonks/eslint-config": "^2.4.0",
+    "@mediamonks/eslint-config-typescript": "^1.4.0",
     "@mediamonks/prettier-config": "^1.0.1",
-    "@types/shelljs": "^0.8.12",
+    "@types/shelljs": "^0.8.15",
     "eslint": "^8.41.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
@@ -85,8 +85,8 @@
     "prettier": "^2.8.8",
     "shelljs": "^0.8.5",
     "shx": "^0.3.4",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.0.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
     "vitest": "^0.31.1"
   },
   "engines": {
