@@ -75,21 +75,7 @@ automatically on every push to the `main` branch (e.g. when a PR is merged).
 
 #### Manual
 
-Since we're publishing from the `dist` folder (see `./scripts/preparePublish.ts` for more
-information), we need to run `npm run build` before publishing.
-
-After that, we can run `prepare-publish` to copy files` over to the 
-`dist` folder, and run `npm publish` from within the `dist`folder.
-
 ```sh
 npm run build
-npm run prepare-publish
-cd dist
 npm publish
 ```
-
-> **Note** that we're publishing from the `dist` folder, not the root of the project, so the 
-> paths might be a bit confusing.
-
-The `./scripts/preparePublish.ts` script is executed before publishing, and it will copy additional
-files to the `dist` folder, such as the `package.json`, `README.md` and `LICENSE` files.
