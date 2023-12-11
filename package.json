@@ -8,9 +8,7 @@
   "repository": "git@github.com:{{todo}}.git",
   "author": "{{todo}} <{{todo}}@mediamonks.com>",
   "license": "MIT",
-  "exports": {
-    "import": "./dist/index.js"
-  },
+  "exports": "./dist/index.js",
   "type": "module",
   "files": [
     "dist/**/*",
@@ -26,14 +24,13 @@
     "build:ts": "tsc -p ./tsconfig.build.json",
     "clean": "npm-run-all clean:*",
     "clean:test": "shx rm -rf coverage .nyc_output",
-    "clean:npm": "shx rm -rf dist",
+    "clean:npm": "shx rm -rf dist node_modules/.cache/.tsbuildinfo",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx,.mjs,.cjs,.mts,.cts . --cache-location node_modules/.cache/.eslintcache",
     "fix": "npm run lint -- --fix",
     "format": "prettier \"**/*.{mjs,cjs,js,jsx,ts,tsx,json,md,mdx,css,scss,html}\" --write --loglevel warn",
     "typecheck": "tsc --project tsconfig.json --noEmit --noUnusedLocals",
-    "prepare-publish": "ts-node-esm ../scripts/preparePublish.ts",
-    "prepublishOnly": "npm run prepare-publish",
-    "prepare": "husky install"
+    "prepare-publish": "tsx ./scripts/preparePublish.ts",
+    "postinstall": "husky install"
   },
   "prettier": "@mediamonks/prettier-config",
   "eslintConfig": {
@@ -85,11 +82,14 @@
     "prettier": "^2.8.8",
     "shelljs": "^0.8.5",
     "shx": "^0.3.4",
-    "ts-node": "^10.9.1",
+    "tsx": "^4.6.2",
     "typescript": "^5.0.4",
     "vitest": "^0.31.1"
   },
   "engines": {
     "node": ">=16.0.0"
+  },
+  "volta": {
+    "node": "20.10.0"
   }
 }

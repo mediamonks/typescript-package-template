@@ -35,6 +35,7 @@ jobs:
 
       - name: Publish
         run: |
+          npm run prepare-publish
           cd ./dist
           npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
           npm publish --tag next
